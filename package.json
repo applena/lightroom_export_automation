@@ -1,0 +1,22 @@
+{
+  "name": "lightroom_export_automation",
+  "version": "1.0.0",
+  "description": "The goal of this project is to export photos from lightroom based on star and color ratings into folders on the desktop that meet the following criteria:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/applena/lightroom_export_automation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/applena/lightroom_export_automation/issues"
+  },
+  "homepage": "https://github.com/applena/lightroom_export_automation#readme",
+  "dependencies": {
+    "sqlite3": "^5.0.2"
+  }
+}
