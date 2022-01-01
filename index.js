@@ -79,7 +79,7 @@ const destDir = `${process.env.HOME}/Desktop/photos/`;
 
       if (data.rating === 5 && data.colorLabels === 'Red' && !fs.existsSync(printFile)) {
         fs.copyFileSync(jpgFile, printFile);
-        process.exit();
+        // process.exit();
       }
 
     }
