@@ -4,8 +4,8 @@ The goal of this project is to export photos from lightroom based on star and co
 
 * Photos with 1 star -> get exported as a raw file to a folder named the month that the photo was taken
 * Photos with 1 star -> get exported as a .jpg file to a folder named the month that they photo was taken
-* Photos with 5 stars -> get exported as a .jpg resized with the long edge to be 1600 pixels into a folder named 'insta'
-* Photos with 5 stars and a red rating -> get exported to a folder named 'print' as a .jpg file full sized
+* Photos with 5 stars -> get exported as a .jpg resized with the long edge to be 1600 pixels into a folder named 'insta' in the root of the month folder
+* Photos with 5 stars and a red rating -> get exported to a folder named 'print' as a .jpg file full sized in the root of the year the photo was taken
 
 ## Notes on Investigation of SQLite
 Lightroom stores it's files in a SQLite database in a .lcrt catalog. Here is a step-by-step process of our investigation into SQLite.
