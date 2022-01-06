@@ -1,5 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('./lr.lrcat');
+const db = new sqlite3.Database('/Users/lenaeivy/Pictures/Lightroom/Lightroom Catalog-v11.lrcat', function (err, data) {
+  console.log({ err, data })
+});
 const fs = require('fs')
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
@@ -26,6 +28,7 @@ const destDir = `${process.env.HOME}/Desktop/photos/`;
 
   }, async () => {
 
+    console.log('results:', results.length)
     for (let i = 0; i < results.length; i++) {
       const data = results[i];
       // make the year and month folders
@@ -48,7 +51,7 @@ const destDir = `${process.env.HOME}/Desktop/photos/`;
       }
 
 
-      const srcFile = `${sourceDir}2021/${data.pathFromRoot}/${data.idx_filename}`;
+      const srcFile = `${sourceDir}${year}/${data.pathFromRoot}${data.idx_filename}`;
       // ~/Desktop/photos/2021/09/raw/GL7A3641.CR2
       const rawFile = `${destDir}${year}/${month}/${day}/raw/${data.idx_filename}`;
       const fileName = `${year}_${month}_${day}_${`${years[year][month][day]}`.padStart(5, '0')}.jpg`
